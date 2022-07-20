@@ -1,0 +1,378 @@
+{
+  "dataset": "CLEVR-v1.0",
+  "types": {
+    "Object": null,
+    "ObjectSet": null,
+    "Integer": null,
+    "Bool": null,
+    "Color": ["white", "black", "blue", "green", "red", "brown", "yellow", "silver", "orange", "grey", "dark", "pink", "tan", "multicolored", "purple", "maroon", "gold", "bright", "colorful", "beige", "light", "blond", "cream", "khaki", "black and white", "sandy", "golden", "chocolate"],
+    "Pattern":["patterned", "flat", "bare", "decorative", "blurry", "floral", "fluffy", "shiny", "plaid", "smooth", "hazy", "spotted", "checkered", "striped"],
+    "Size": ["narrow", "part", "small", "large", "tiny", "tall", "long", "wide", "high", "thin", "huge", "thick", "short", "sliced"],
+    "Material": ["leafless", "rocky", "wooden", "stainless steel", "glass", "wood", "plastic", "brick", "iron", "rubber", "concrete", "porcelain", "wire", "stone", "tile", "pine", "leather", "grassy", "cement", "leafy", "tiled", "paper", "dirt", "steel", "ceramic", "chrome", "metallic"],
+    "State": ["standing", "open", "parked", "sitting", "walking", "young", "old", "hanging", "empty", "on", "cloudy", "wet", "closed", "dirty", "flying", "smiling", "painted", "playing", "tennis", "calm", "distant", "looking", "dry", "wearing", "man's", "baseball", "cooked", "pictured", "dead", "eating", "paved", "lit", "back", "framed", "watching", "colored", "stuffed", "clean", "stacked", "covered", "full", "street", "baby", "beautiful", "present", "grazing", "side", "growing", "cut", "train", "holding", "water", "up", "folded", "electrical", "running", "electric", "rusty", "furry", "traffic", "ripe", "behind", "laying", "down", "fresh", "surfing", "close", "off", "leaning", "moving", "woman's", "background", "chain link", "top", "tree", "broken", "worn", "ski", "overcast", "waiting", "riding", "skinny", "grass", "adult", "cloudless", "cardboard", "jumping", "male", "computer", "older", "raised", "bald", "snow covered", "skateboarding", "reflective", "rear", "extended", "roman", "american"],
+    "Shape": ["rectangular", "curved", "curly", "square", "round", "bent", "pointed", "arched", "pointy"],
+    "Det": ["three", "one", "four", "pair", "some", "many"],
+    "Backdet": ["in background", "in the picture", "here"],
+    "Relation": ["above", "across", "against", "along", "and", "at", "attached to", "behind", "belonging to", "between", "carrying", "covered in", "covering", "eating", "flying in", "for", "from", "growing on", "hanging from", "has", "holding", "in", "in front of", "laying on", "looking at", "lying on", "made of", "mounted on", "near", "of", "on", "on back of", "over", "painted on", "parked on", "part of", "playing", "riding", "says", "sitting on", "standing on", "to", "under", "using", "walking in", "walking on", "watching", "wearing", "wears", "with"],
+    "Label": ["airplane", "animal", "arm", "bag", "banana", "basket", "beach", "bear", "bed", "bench", "bike", "bird", "board", "boat", "book", "boot", "bottle", "bowl", "box", "boy", "branch", "building", "bus", "cabinet", "cap", "car", "cat", "chair", "child", "clock", "coat", "counter", "cow", "cup", "curtain", "desk", "dog", "door", "drawer", "ear", "elephant", "engine", "eye", "face", "fence", "finger", "flag", "flower", "food", "fork", "fruit", "giraffe", "girl", "glass", "glove", "guy", "hair", "hand", "handle", "hat", "head", "helmet", "hill", "horse", "house", "jacket", "jean", "kid", "kite", "lady", "lamp", "laptop", "leaf", "leg", "letter", "light", "logo", "man", "men", "motorcycle", "mountain", "mouth", "neck", "nose", "number", "orange", "pant", "paper", "paw", "people", "person", "phone", "pillow", "pizza", "plane", "plant", "plate", "player", "pole", "post", "pot", "racket", "railing", "rock", "roof", "room", "screen", "seat", "sheep", "shelf", "shirt", "shoe", "short", "sidewalk", "sign", "sink", "skateboard", "ski", "skier", "sneaker", "snow", "sock", "stand", "street", "surfboard", "table", "tail", "tie", "tile", "tire", "toilet", "towel", "tower", "track", "train", "tree", "truck", "trunk", "umbrella", "vase", "vegetable", "vehicle", "wave", "wheel", "window", "windshield", "wing", "wire", "woman", "zebra"]
+  },
+  "functions": [
+    {
+      "name": "scene",
+      "inputs": [],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_color",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Color"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_pattern",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Pattern"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_size",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Size"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_material",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Material"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_state",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["State"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_shape",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Shape"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_det",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Det"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_backdet",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Backdet"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter_label",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Label"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "unique",
+      "inputs": ["ObjectSet"],
+      "output": "Object",
+      "terminal": false,
+      "properties": []
+    },
+    {
+      "name": "relate",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "union",
+      "inputs": ["ObjectSet", "ObjectSet"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "intersect",
+      "inputs": ["ObjectSet", "ObjectSet"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "count",
+      "inputs": ["ObjectSet"],
+      "output": "Integer",
+      "terminal": true
+    },
+    {
+      "name": "query_color",
+      "inputs": ["Object"],
+      "output": "Color",
+      "terminal": true
+    },
+    {
+      "name": "query_pattern",
+      "inputs": ["Object"],
+      "output": "Pattern",
+      "terminal": true
+    },
+    {
+      "name": "query_size",
+      "inputs": ["Object"],
+      "output": "Size",
+      "terminal": true
+    },
+    {
+      "name": "query_material",
+      "inputs": ["Object"],
+      "output": "Material",
+      "terminal": true
+    },
+    {
+      "name": "query_state",
+      "inputs": ["Object"],
+      "output": "State",
+      "terminal": true
+    },
+    {
+      "name": "query_shape",
+      "inputs": ["Object"],
+      "output": "Shape",
+      "terminal": true
+    },
+    {
+      "name": "query_det",
+      "inputs": ["Object"],
+      "output": "Det",
+      "terminal": true
+    },
+    {
+      "name": "query_backdet",
+      "inputs": ["Object"],
+      "output": "Backdet",
+      "terminal": true
+    },
+    {
+      "name": "query_label",
+      "inputs": ["Object"],
+      "output": "Label",
+      "terminal": true
+    },
+    {
+      "name": "exist",
+      "inputs": ["ObjectSet"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_color",
+      "inputs": ["Color", "Color"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_shape",
+      "inputs": ["Shape", "Shape"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_integer",
+      "inputs": ["Integer", "Integer"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "less_than",
+      "inputs": ["Integer", "Integer"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "greater_than",
+      "inputs": ["Integer", "Integer"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_size",
+      "inputs": ["Size", "Size"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_pattern",
+      "inputs": ["Pattern", "Pattern"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_material",
+      "inputs": ["Material", "Material"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_state",
+      "inputs": ["State", "State"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_det",
+      "inputs": ["Det", "Det"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_backdet",
+      "inputs": ["Backdet", "Backdet"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_label",
+      "inputs": ["Label", "Label"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "equal_object",
+      "inputs": ["Object", "Object"],
+      "output": "Bool",
+      "terminal": true
+    },
+    {
+      "name": "same_size",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_color",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_label",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_shape",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_pattern",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_material",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_state",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_det",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "same_backdet",
+      "inputs": ["Object"],
+      "output": "ObjectSet",
+      "terminal": false
+    },
+    {
+      "name": "filter",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "ObjectSet",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "filter_unique",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "Object",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "filter_count",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "Integer",
+      "terminal": true,
+      "template_only": true
+    },
+    {
+      "name": "filter_exist",
+      "inputs": ["ObjectSet"],
+      "side_inputs": ["Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "Bool",
+      "terminal": true,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "ObjectSet",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter_unique",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "Object",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter_count",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "Integer",
+      "terminal": false,
+      "template_only": true
+    },
+    {
+      "name": "relate_filter_exist",
+      "inputs": ["Object"],
+      "side_inputs": ["Relation", "Color", "Pattern", "Size", "Material", "State", "Shape", "Det", "Backdet", "Label"],
+      "output": "Bool",
+      "terminal": false,
+      "template_only": true
+    }
+  ]
+}

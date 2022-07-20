@@ -1,0 +1,808 @@
+[
+    {
+      "text": [
+        "What shape is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "What is the shape of <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> has what shape?",
+        "There is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>; what shape is it?",
+        "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> is what shape?"
+      ],
+      "nodes": [
+        {
+            "inputs": [],
+            "type": "scene"
+        },
+        {
+            "side_inputs": [
+                "<D>", "<C>", "<P>", "<Z>", "<M>", "<T>", "<H>", "<B>", "<L>"
+            ],
+            "inputs": [
+                0
+            ],
+            "type": "filter_unique"
+        },
+        {
+            "side_inputs": [
+                "<R>", "<D2>", "<C2>", "<P2>", "<Z2>", "<M2>", "<T2>", "<H2>", "<B2>", "<L2>"
+            ],
+            "inputs": [
+                1
+            ],
+            "type": "relate_filter_unique"
+        },
+        {
+            "inputs":[2],
+            "type":"query_shape"
+        }
+      ],
+      "params": [
+        {
+        "type": "Color",
+        "name": "<C>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z>"
+        },
+        {
+        "type": "Material",
+        "name": "<M>"
+        },
+        {
+        "type": "State",
+        "name": "<T>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H>"
+        },
+        {
+        "type": "Det",
+        "name": "<D>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B>"
+        },
+        {
+        "type": "Label",
+        "name": "<L>"
+        },
+        {
+        "type": "Relation",
+        "name": "<R>"
+        },
+        {
+        "type": "Color",
+        "name": "<C2>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P2>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z2>"
+        },
+        {
+        "type": "Material",
+        "name": "<M2>"
+        },
+        {
+        "type": "State",
+        "name": "<T2>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H2>"
+        },
+        {
+        "type": "Det",
+        "name": "<D2>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B2>"
+        },
+        {
+        "type": "Label",
+        "name": "<L2>"
+        }
+      ],
+      "constraints": [
+        {
+          "params": [
+            "<H2>"
+          ],
+          "type": "NULL"
+        },
+        {
+          "params": [
+            "<L>"
+          ],
+          "type": "NOT_NULL"
+        },
+        {
+            "params": [
+              "<L2>"
+            ],
+            "type": "NOT_NULL"
+        }
+      ]
+    },
+    {
+      "text": [
+        "What material is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "What is the material of <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "What is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> made of?"
+      ],
+      "nodes": [
+        {
+            "inputs": [],
+            "type": "scene"
+        },
+        {
+            "side_inputs": [
+                "<D>", "<C>", "<P>", "<Z>", "<M>", "<T>", "<H>", "<B>", "<L>"
+            ],
+            "inputs": [
+                0
+            ],
+            "type": "filter_unique"
+        },
+        {
+            "side_inputs": [
+                "<R>", "<D2>", "<C2>", "<P2>", "<Z2>", "<M2>", "<T2>", "<H2>", "<B2>", "<L2>"
+            ],
+            "inputs": [
+                1
+            ],
+            "type": "relate_filter_unique"
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "type": "query_material"
+        }
+      ],
+      "params": [
+        {
+        "type": "Color",
+        "name": "<C>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z>"
+        },
+        {
+        "type": "Material",
+        "name": "<M>"
+        },
+        {
+        "type": "State",
+        "name": "<T>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H>"
+        },
+        {
+        "type": "Det",
+        "name": "<D>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B>"
+        },
+        {
+        "type": "Label",
+        "name": "<L>"
+        },
+        {
+        "type": "Relation",
+        "name": "<R>"
+        },
+        {
+        "type": "Color",
+        "name": "<C2>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P2>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z2>"
+        },
+        {
+        "type": "Material",
+        "name": "<M2>"
+        },
+        {
+        "type": "State",
+        "name": "<T2>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H2>"
+        },
+        {
+        "type": "Det",
+        "name": "<D2>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B2>"
+        },
+        {
+        "type": "Label",
+        "name": "<L2>"
+        }
+      ],
+      "constraints": [
+        {
+          "params": [
+            "<M2>"
+          ],
+          "type": "NULL"
+        },
+        {
+          "params": [
+            "<L>"
+          ],
+          "type": "NOT_NULL"
+        },
+        {
+            "params": [
+              "<L2>"
+            ],
+            "type": "NOT_NULL"
+        }
+      ]
+    },
+    {
+      "text": [
+        "What color is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "What is the color of <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> has what color?",
+        "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> is what color?"
+      ],
+      "nodes": [
+        {
+            "inputs": [],
+            "type": "scene"
+        },
+        {
+            "side_inputs": [
+                "<D>", "<C>", "<P>", "<Z>", "<M>", "<T>", "<H>", "<B>", "<L>"
+            ],
+            "inputs": [
+                0
+            ],
+            "type": "filter_unique"
+        },
+        {
+            "side_inputs": [
+                "<R>", "<D2>", "<C2>", "<P2>", "<Z2>", "<M2>", "<T2>", "<H2>", "<B2>", "<L2>"
+            ],
+            "inputs": [
+                1
+            ],
+            "type": "relate_filter_unique"
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "type": "query_color"
+        }
+      ],
+      "params": [
+        {
+        "type": "Color",
+        "name": "<C>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z>"
+        },
+        {
+        "type": "Material",
+        "name": "<M>"
+        },
+        {
+        "type": "State",
+        "name": "<T>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H>"
+        },
+        {
+        "type": "Det",
+        "name": "<D>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B>"
+        },
+        {
+        "type": "Label",
+        "name": "<L>"
+        },
+        {
+        "type": "Relation",
+        "name": "<R>"
+        },
+        {
+        "type": "Color",
+        "name": "<C2>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P2>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z2>"
+        },
+        {
+        "type": "Material",
+        "name": "<M2>"
+        },
+        {
+        "type": "State",
+        "name": "<T2>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H2>"
+        },
+        {
+        "type": "Det",
+        "name": "<D2>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B2>"
+        },
+        {
+        "type": "Label",
+        "name": "<L2>"
+        }
+      ],
+      "constraints": [
+        {
+          "params": [
+            "<C2>"
+          ],
+          "type": "NULL"
+        },
+        {
+          "params": [
+            "<L>"
+          ],
+          "type": "NOT_NULL"
+        },
+        {
+            "params": [
+              "<L2>"
+            ],
+            "type": "NOT_NULL"
+        }
+      ]
+    },
+    {
+      "text": [
+        "What size is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "What is the size of <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+        "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> has what size?",
+        "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> is what size?",
+        "How big is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?"
+      ],
+      "nodes": [
+        {
+            "inputs": [],
+            "type": "scene"
+        },
+        {
+            "side_inputs": [
+                "<D>", "<C>", "<P>", "<Z>", "<M>", "<T>", "<H>", "<B>", "<L>"
+            ],
+            "inputs": [
+                0
+            ],
+            "type": "filter_unique"
+        },
+        {
+            "side_inputs": [
+                "<R>", "<D2>", "<C2>", "<P2>", "<Z2>", "<M2>", "<T2>", "<H2>", "<B2>", "<L2>"
+            ],
+            "inputs": [
+                1
+            ],
+            "type": "relate_filter_unique"
+        },
+        {
+          "inputs": [
+            2
+          ],
+          "type": "query_size"
+        }
+      ],
+      "params": [
+        {
+        "type": "Color",
+        "name": "<C>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z>"
+        },
+        {
+        "type": "Material",
+        "name": "<M>"
+        },
+        {
+        "type": "State",
+        "name": "<T>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H>"
+        },
+        {
+        "type": "Det",
+        "name": "<D>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B>"
+        },
+        {
+        "type": "Label",
+        "name": "<L>"
+        },
+        {
+        "type": "Relation",
+        "name": "<R>"
+        },
+        {
+        "type": "Color",
+        "name": "<C2>"
+        },
+        {
+        "type": "Pattern",
+        "name": "<P2>"
+        },
+        {
+        "type": "Size",
+        "name": "<Z2>"
+        },
+        {
+        "type": "Material",
+        "name": "<M2>"
+        },
+        {
+        "type": "State",
+        "name": "<T2>"
+        },
+        {
+        "type": "Shape",
+        "name": "<H2>"
+        },
+        {
+        "type": "Det",
+        "name": "<D2>"
+        },
+        {
+        "type": "Backdet",
+        "name": "<B2>"
+        },
+        {
+        "type": "Label",
+        "name": "<L2>"
+        }
+      ],
+      "constraints": [
+        {
+          "params": [
+            "<Z2>"
+          ],
+          "type": "NULL"
+        },
+        {
+          "params": [
+            "<L>"
+          ],
+          "type": "NOT_NULL"
+        },
+        {
+            "params": [
+              "<L2>"
+            ],
+            "type": "NOT_NULL"
+        }
+      ]
+    },
+    {
+        "text": [
+          "What pattern is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+          "What is the pattern of <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?",
+          "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> has what pattern?",
+          "<D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B> is what pattern?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<D>", "<C>", "<P>", "<Z>", "<M>", "<T>", "<H>", "<B>", "<L>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>", "<D2>", "<C2>", "<P2>", "<Z2>", "<M2>", "<T2>", "<H2>", "<B2>", "<L2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "query_pattern"
+            }
+        ],
+        "params": [
+            {
+            "type": "Color",
+            "name": "<C>"
+            },
+            {
+            "type": "Pattern",
+            "name": "<P>"
+            },
+            {
+            "type": "Size",
+            "name": "<Z>"
+            },
+            {
+            "type": "Material",
+            "name": "<M>"
+            },
+            {
+            "type": "State",
+            "name": "<T>"
+            },
+            {
+            "type": "Shape",
+            "name": "<H>"
+            },
+            {
+            "type": "Det",
+            "name": "<D>"
+            },
+            {
+            "type": "Backdet",
+            "name": "<B>"
+            },
+            {
+            "type": "Label",
+            "name": "<L>"
+            },
+            {
+            "type": "Relation",
+            "name": "<R>"
+            },
+            {
+            "type": "Color",
+            "name": "<C2>"
+            },
+            {
+            "type": "Pattern",
+            "name": "<P2>"
+            },
+            {
+            "type": "Size",
+            "name": "<Z2>"
+            },
+            {
+            "type": "Material",
+            "name": "<M2>"
+            },
+            {
+            "type": "State",
+            "name": "<T2>"
+            },
+            {
+            "type": "Shape",
+            "name": "<H2>"
+            },
+            {
+            "type": "Det",
+            "name": "<D2>"
+            },
+            {
+            "type": "Backdet",
+            "name": "<B2>"
+            },
+            {
+            "type": "Label",
+            "name": "<L2>"
+            }
+        ],
+        "constraints": [
+          {
+            "params": [
+              "<P2>"
+            ],
+            "type": "NULL"
+          },
+          {
+            "params": [
+              "<L>"
+            ],
+            "type": "NOT_NULL"
+          },
+          {
+              "params": [
+                "<L2>"
+              ],
+              "type": "NOT_NULL"
+          }
+        ]
+    },
+    {
+        "text": [
+          "What is <D2> <M2> <C2> <P2> <Z2> <H2> <T2> <L2> <B2> [that is] <R> <D> <M> <C> <P> <Z> <H> <T> <L> <B>?"
+        ],
+        "nodes": [
+            {
+                "inputs": [],
+                "type": "scene"
+            },
+            {
+                "side_inputs": [
+                    "<D>", "<C>", "<P>", "<Z>", "<M>", "<T>", "<H>", "<B>", "<L>"
+                ],
+                "inputs": [
+                    0
+                ],
+                "type": "filter_unique"
+            },
+            {
+                "side_inputs": [
+                    "<R>", "<D2>", "<C2>", "<P2>", "<Z2>", "<M2>", "<T2>", "<H2>", "<B2>", "<L2>"
+                ],
+                "inputs": [
+                    1
+                ],
+                "type": "relate_filter_unique"
+            },
+            {
+                "inputs": [
+                    2
+                ],
+                "type": "query_label"
+            }
+        ],
+        "params": [
+            {
+            "type": "Color",
+            "name": "<C>"
+            },
+            {
+            "type": "Pattern",
+            "name": "<P>"
+            },
+            {
+            "type": "Size",
+            "name": "<Z>"
+            },
+            {
+            "type": "Material",
+            "name": "<M>"
+            },
+            {
+            "type": "State",
+            "name": "<T>"
+            },
+            {
+            "type": "Shape",
+            "name": "<H>"
+            },
+            {
+            "type": "Det",
+            "name": "<D>"
+            },
+            {
+            "type": "Backdet",
+            "name": "<B>"
+            },
+            {
+            "type": "Label",
+            "name": "<L>"
+            },
+            {
+            "type": "Relation",
+            "name": "<R>"
+            },
+            {
+            "type": "Color",
+            "name": "<C2>"
+            },
+            {
+            "type": "Pattern",
+            "name": "<P2>"
+            },
+            {
+            "type": "Size",
+            "name": "<Z2>"
+            },
+            {
+            "type": "Material",
+            "name": "<M2>"
+            },
+            {
+            "type": "State",
+            "name": "<T2>"
+            },
+            {
+            "type": "Shape",
+            "name": "<H2>"
+            },
+            {
+            "type": "Det",
+            "name": "<D2>"
+            },
+            {
+            "type": "Backdet",
+            "name": "<B2>"
+            },
+            {
+            "type": "Label",
+            "name": "<L2>"
+            }
+        ],
+        "constraints": [
+          {
+            "params": [
+              "<L2>"
+            ],
+            "type": "NULL"
+          },
+          {
+              "params": [
+                "<L>"
+              ],
+              "type": "NOT_NULL"
+          }
+        ]
+    }
+]
