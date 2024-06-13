@@ -1,5 +1,4 @@
-# InVQG
-Dataset &amp; Code for Inferential Visual Question Generation
+# ICVQG
 
 ## requirements
 
@@ -41,6 +40,6 @@ Run reformimg.py and reformq.py to build our new dataset InVQA.
 
 ## Note
 
-Since we accidentally mixed personal information into the path where we stored the model, we deleted the path in the code. You need to set your own path to run and save data.
-
 Since our module is detachable, the code is currently rough. We will clean it and unify the saved path soon.
+
+A complete and clear version will be published after the paper is published.
