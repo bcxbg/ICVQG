@@ -1,6 +1,6 @@
 # ICVQG
 
-## requirements
+## Requirements
 
 1.refer to https://github.com/KaihuaTang/Scene-Graph-Benchmark.pytorch
 
@@ -37,6 +37,12 @@ Run evlrouge.py to evaluate on ROUGE.
 Run hevldata.py to prepare  the data and then run hevltk.py for human evaluation.
 
 Run reformimg.py and reformq.py to build our new dataset InVQA.
+
+## Dateset
+
+The method can be used to construct VQA data. Please download from the link below:
+
+https://pan.baidu.com/s/1iA0ehEn141xZH6l4grBTrQ  (Extraction code: qmpb)
 
 ## Note
 
