@@ -38,7 +38,7 @@ Run hevldata.py to prepare  the data and then run hevltk.py for human evaluation
 
 Run reformimg.py and reformq.py to build our new dataset InVQA.
 
-## Dateset
+## Dataset
 
 The method can be used to construct VQA data. Please download from the link below:
 
